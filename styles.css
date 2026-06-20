@@ -374,6 +374,17 @@ h3 {
   box-shadow: 0 0 34px rgba(239, 21, 21, 0.22);
 }
 
+.book-cover {
+  width: min(190px, 100%);
+  aspect-ratio: 2 / 3;
+  justify-self: center;
+  border: 1px solid rgba(239, 21, 21, 0.3);
+  border-radius: var(--radius);
+  background: rgba(9, 9, 9, 0.74);
+  box-shadow: var(--shadow-red);
+  object-fit: cover;
+}
+
 .status-pill {
   width: fit-content;
   padding: 5px 9px;

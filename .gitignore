@@ -1,6 +1,7 @@
 *.log
 preview*.png
 .server.pid
+.tmp-amazon/
 .DS_Store
 .wrangler/
 node_modules/
