@@ -1,0 +1,14 @@
+{
+  "name": "Becca Swan",
+  "short_name": "Becca Swan",
+  "icons": [
+    {
+      "src": "assets/becca-swan-round-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#0d0d0d",
+  "background_color": "#0d0d0d",
+  "display": "standalone"
+}
