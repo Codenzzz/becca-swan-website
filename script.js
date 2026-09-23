@@ -16,10 +16,11 @@ document.querySelectorAll("[data-mailto-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(form);
+    const recipient = form.dataset.to || "";
     const subject = encodeURIComponent(data.get("subject") || "Website message");
     const body = encodeURIComponent(
       `Name: ${data.get("name") || ""}\nEmail: ${data.get("email") || ""}\n\n${data.get("message") || ""}`,
     );
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
   });
 });
