@@ -110,10 +110,12 @@ textarea:focus-visible {
 }
 
 .brand small {
+  max-width: 260px;
   color: var(--color-muted);
-  font-size: 0.76rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .site-nav {
@@ -181,6 +183,10 @@ textarea:focus-visible {
 
 .hero h1 {
   max-width: 760px;
+}
+
+.home-tagline {
+  font-size: clamp(2.5rem, 5.5vw, 4.6rem);
 }
 
 h1,
@@ -512,6 +518,12 @@ textarea {
   font-size: 0.88rem;
 }
 
+.footer-brand span span {
+  display: block;
+  max-width: 370px;
+  line-height: 1.4;
+}
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -565,7 +577,8 @@ textarea {
 
 @media (max-width: 520px) {
   .brand small {
-    display: none;
+    max-width: 205px;
+    font-size: 0.62rem;
   }
 
   .brand strong {
@@ -579,6 +592,10 @@ textarea {
 
   .hero {
     min-height: 620px;
+  }
+
+  .home-tagline {
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
   }
 
   .actions {
