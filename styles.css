@@ -430,8 +430,9 @@ h2 {
 /* ---------- Deliverance preorder ---------- */
 
 .home-hero--preorder .container {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 580px);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 64px;
+  padding-block: 72px 80px;
 }
 
 .home-hero--preorder h1 {
@@ -463,15 +464,29 @@ h2 {
 .preorder-art {
   display: block;
   width: 100%;
-  max-width: 640px;
+  max-width: 340px;
+  margin: 0;
   justify-self: center;
-  overflow: hidden;
+}
+
+.preorder-art a {
+  display: block;
 }
 
 .preorder-art img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 2px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+.cover-credit {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--muted);
 }
 
 /* ---------- Strip ---------- */
@@ -550,8 +565,9 @@ h2 {
 }
 
 .feature--preorder .container {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
   gap: 64px;
+  align-items: start;
 }
 
 .feature-cover {
