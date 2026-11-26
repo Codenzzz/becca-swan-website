@@ -359,6 +359,7 @@ h2 {
 
 /* ---------- Hero backgrounds ---------- */
 
+.home-intro,
 .home-hero,
 .page-hero {
   border-bottom: 1px solid rgba(255, 74, 74, 0.14);
@@ -366,6 +367,26 @@ h2 {
     linear-gradient(rgba(12, 10, 10, 0.8), rgba(12, 10, 10, 0.8)),
     url("assets/swan-pattern.png") 0 0 / 228px auto repeat,
     var(--bg);
+}
+
+/* ---------- Home headline ---------- */
+
+.home-intro {
+  padding-block: clamp(28px, 4vw, 52px) 0;
+  border-bottom: 0;
+  text-align: center;
+}
+
+.home-intro h1 {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: clamp(1.6rem, 1rem + 2.2vw, 3rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.home-intro em {
+  color: var(--red-em);
 }
 
 /* ---------- Home hero ---------- */
@@ -378,13 +399,13 @@ h2 {
   padding-block: 96px 104px;
 }
 
-.home-hero h1 {
+.home-hero h2 {
   font-size: clamp(2.5rem, 1.2rem + 3.9vw, 4.5rem);
   line-height: 1.02;
   letter-spacing: -0.01em;
 }
 
-.home-hero h1 em,
+.home-hero h2 em,
 .page-hero h1 em {
   font-style: italic;
   color: var(--red-em);
@@ -449,10 +470,10 @@ h2 {
 .home-hero--preorder .container {
   grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
   gap: 64px;
-  padding-block: 72px 80px;
+  padding-block: 32px 80px;
 }
 
-.home-hero--preorder h1 {
+.home-hero--preorder h2 {
   margin-top: 18px;
   font-size: clamp(2.2rem, 1.2rem + 3.6vw, 4.5rem);
 }
@@ -1198,7 +1219,7 @@ textarea:focus {
   .home-hero--preorder .container {
     grid-template-columns: minmax(0, 1fr);
     gap: 48px;
-    padding-block: 72px 80px;
+    padding-block: 32px 80px;
   }
 
   .hero-books,
@@ -1403,10 +1424,10 @@ textarea:focus {
 
   .home-hero .container {
     gap: 40px;
-    padding-block: 40px 48px;
+    padding-block: 24px 48px;
   }
 
-  .home-hero h1 {
+  .home-hero h2 {
     line-height: 1.06;
   }
 
