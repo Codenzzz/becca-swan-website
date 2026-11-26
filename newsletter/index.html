@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Newsletter | Becca Swan</title>
-    <meta name="description" content="Join Becca Swan’s Book Realm for new releases, sneak peeks, cover reveals, subscriber updates and giveaways.">
+    <meta name="description" content="Sign up for Becca Swan’s newsletter and get The Bach short story free, plus new releases, sneak peeks, cover reveals and giveaways.">
     <meta name="theme-color" content="#0c0a0a">
     <meta name="color-scheme" content="dark">
     <link rel="canonical" href="https://www.beccaswan.com/newsletter/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Becca Swan">
     <meta property="og:title" content="Newsletter | Becca Swan">
-    <meta property="og:description" content="Join Becca Swan’s Book Realm for new releases, sneak peeks, cover reveals, subscriber updates and giveaways.">
+    <meta property="og:description" content="Sign up for Becca Swan’s newsletter and get The Bach short story free, plus new releases, sneak peeks, cover reveals and giveaways.">
     <meta property="og:url" content="https://www.beccaswan.com/newsletter/">
     <meta property="og:image" content="https://www.beccaswan.com/assets/becca-swan-share.jpg">
     <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
     <meta property="og:image:alt" content="Becca Swan red wolf logo beside the covers of Bella: The Beta’s Daughter, Luna Aleksa’s Escape and The Bach.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Newsletter | Becca Swan">
-    <meta name="twitter:description" content="Join Becca Swan’s Book Realm for new releases, sneak peeks, cover reveals, subscriber updates and giveaways.">
+    <meta name="twitter:description" content="Sign up for Becca Swan’s newsletter and get The Bach short story free, plus new releases, sneak peeks, cover reveals and giveaways.">
     <meta name="twitter:image" content="https://www.beccaswan.com/assets/becca-swan-share.jpg">
     <link rel="icon" href="../assets/becca-swan-round-logo.jpg">
     <link rel="apple-touch-icon" href="../assets/becca-swan-round-logo.jpg">
@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap">
-    <link rel="stylesheet" href="../styles.css?v=genre-navigation-20261126">
+    <link rel="stylesheet" href="../styles.css?v=newsletter-genres-20261126">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -39,30 +39,43 @@
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg></button>
         <nav class="site-nav" id="site-nav" data-nav aria-label="Site">
-          <a href="../books/">Books</a>
-          <a href="../books/#christmas">Holiday Romance</a>
-          <a href="../about/">About</a>
-          <a href="https://www.inkitt.com/BeccaSwan" rel="noopener">Inkitt</a>
-          <a href="../contact/">Contact</a>
-          <a class="nav-cta" href="../newsletter/" aria-current="page">Join the list</a>
+          <div class="nav-pages">
+            <a href="/about/">About</a>
+            <a href="https://www.inkitt.com/BeccaSwan" rel="noopener">Inkitt</a>
+            <a href="/contact/">Contact</a>
+            <a class="nav-cta" href="/newsletter/" aria-current="page">Newsletter Sign Up</a>
+          </div>
+          <div class="nav-genres">
+            <a href="/fantasy-shifter-romance/">Fantasy &amp; Shifter Romance</a>
+            <a href="/holiday-romance/">Holiday Romance</a>
+            <a href="/contemporary-romance/">Contemporary Romance</a>
+            <a href="/thrillers/">Thrillers</a>
+          </div>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="page-hero page-hero--split">
+      <section class="page-hero page-hero--split newsletter-page">
         <div class="container">
           <div>
             <p class="label">Becca Swan’s Book Realm</p>
-            <h1>Join Becca Swan’s reader list.</h1>
-            <p class="lead">New releases, sneak peeks, cover reveals, subscriber updates, giveaways, and more, for readers who want to stay close to the darker side of Becca’s worlds.</p>
+            <h1>Newsletter Sign Up</h1>
+            <div class="newsletter-gift">
+              <img class="newsletter-gift-cover" src="../assets/the-bach-cover.jpg" alt="Cover of The Bach by Becca Swan" width="943" height="1500">
+              <div>
+                <p class="gift-offer"><strong>Get <em>The Bach</em> short story free when you sign up.</strong></p>
+                <p class="gift-description">A remote island. A dream honeymoon. A stranger’s chilling suggestion.</p>
+                <p class="gift-description">Plus new releases, sneak peeks, cover reveals, subscriber updates and giveaways, straight to your inbox.</p>
+              </div>
+            </div>
           </div>
-          <div class="panel">
+          <div class="panel newsletter-panel">
             <form class="signup" action="https://assets.mailerlite.com/jsonp/1979694/forms/199376724610254230/subscribe" method="post" data-signup-form>
               <label class="field-label" for="signup-email">Email address</label>
               <div class="signup-row">
                 <input id="signup-email" name="fields[email]" type="email" autocomplete="email" placeholder="you@example.com" required>
-                <button class="btn btn-primary" type="submit">Join the list</button>
+                <button class="btn btn-primary" type="submit">Newsletter Sign Up</button>
               </div>
               <p class="form-status" data-signup-status role="status" aria-live="polite"></p>
               <p class="form-note">No spam. Unsubscribe anytime.</p>
@@ -105,17 +118,20 @@
             <span class="brand-name">Becca Swan</span>
           </a>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="../books/">Books</a>
-            <a href="../about/">About</a>
-            <a href="../newsletter/">Newsletter</a>
+            <a href="/fantasy-shifter-romance/">Fantasy &amp; Shifter Romance</a>
+            <a href="/holiday-romance/">Holiday Romance</a>
+            <a href="/contemporary-romance/">Contemporary Romance</a>
+            <a href="/thrillers/">Thrillers</a>
+            <a href="/about/">About</a>
+            <a href="/newsletter/">Newsletter Sign Up</a>
             <a href="https://www.inkitt.com/BeccaSwan" rel="noopener">Inkitt</a>
-            <a href="../contact/">Contact</a>
+            <a href="/contact/">Contact</a>
             <a class="footer-email" href="mailto:beccaswanbooks@gmail.com">beccaswanbooks@gmail.com</a>
           </nav>
         </div>
         <p class="footer-bottom">&copy; <span data-year>2026</span> Becca Swan</p>
       </div>
     </footer>
-    <script src="../script.js?v=genre-navigation-20261126"></script>
+    <script src="../script.js?v=newsletter-genres-20261126"></script>
   </body>
 </html>

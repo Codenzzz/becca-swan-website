@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap">
-    <link rel="stylesheet" href="../styles.css?v=genre-navigation-20261126">
+    <link rel="stylesheet" href="../styles.css?v=newsletter-genres-20261126">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -39,12 +39,18 @@
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg></button>
         <nav class="site-nav" id="site-nav" data-nav aria-label="Site">
-          <a href="../books/">Books</a>
-          <a href="../books/#christmas">Holiday Romance</a>
-          <a href="../about/" aria-current="page">About</a>
-          <a href="https://www.inkitt.com/BeccaSwan" rel="noopener">Inkitt</a>
-          <a href="../contact/">Contact</a>
-          <a class="nav-cta" href="../newsletter/">Join the list</a>
+          <div class="nav-pages">
+            <a href="/about/" aria-current="page">About</a>
+            <a href="https://www.inkitt.com/BeccaSwan" rel="noopener">Inkitt</a>
+            <a href="/contact/">Contact</a>
+            <a class="nav-cta" href="/newsletter/">Newsletter Sign Up</a>
+          </div>
+          <div class="nav-genres">
+            <a href="/fantasy-shifter-romance/">Fantasy &amp; Shifter Romance</a>
+            <a href="/holiday-romance/">Holiday Romance</a>
+            <a href="/contemporary-romance/">Contemporary Romance</a>
+            <a href="/thrillers/">Thrillers</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -70,14 +76,14 @@
             <p>Whatever world you step into, expect emotion, twists, memorable characters, and a story that keeps you turning the pages.</p>
             <div class="actions">
               <a class="btn btn-primary" href="https://www.inkitt.com/BeccaSwan" rel="noopener">Follow me on Inkitt</a>
-              <a class="btn btn-ghost" href="../books/">Browse the books</a>
+              <a class="btn btn-ghost" href="/fantasy-shifter-romance/">Fantasy &amp; Shifter Romance</a>
             </div>
           </div>
           <ul class="about-covers" aria-label="A few of Becca’s books">
-            <li><a href="../books/#luna"><img src="../assets/luna-aleksas-escape-cover.jpg" alt="Cover of Luna Aleksa’s Escape" width="640" height="1024" loading="lazy"></a></li>
-            <li><a href="../books/#bella"><img src="../assets/bella-the-betas-daughter-cover.jpg" alt="Cover of Bella: The Beta’s Daughter" width="640" height="1024" loading="lazy"></a></li>
-            <li><a href="../books/#the-bach"><img src="../assets/the-bach-cover.jpg" alt="Cover of The Bach" width="640" height="1024" loading="lazy"></a></li>
-            <li><a href="../books/#alphas-christmas-angel"><img src="../assets/alphas-christmas-angel-cover.jpg" alt="Cover of Alpha’s Christmas Angel" width="640" height="1024" loading="lazy"></a></li>
+            <li><a href="/fantasy-shifter-romance/#luna"><img src="../assets/luna-aleksas-escape-cover.jpg" alt="Cover of Luna Aleksa’s Escape" width="640" height="1024" loading="lazy"></a></li>
+            <li><a href="/fantasy-shifter-romance/#bella"><img src="../assets/bella-the-betas-daughter-cover.jpg" alt="Cover of Bella: The Beta’s Daughter" width="640" height="1024" loading="lazy"></a></li>
+            <li><a href="/thrillers/#the-bach"><img src="../assets/the-bach-cover.jpg" alt="Cover of The Bach" width="640" height="1024" loading="lazy"></a></li>
+            <li><a href="/holiday-romance/#alphas-christmas-angel"><img src="../assets/alphas-christmas-angel-cover.jpg" alt="Cover of Alpha’s Christmas Angel" width="640" height="1024" loading="lazy"></a></li>
           </ul>
         </div>
       </section>
@@ -106,17 +112,21 @@
         </div>
       </section>
 
-      <section class="band band--compact" id="newsletter" aria-label="Newsletter sign-up">
+      <section class="band band--gift band--compact" id="newsletter" aria-label="Newsletter sign-up">
         <div class="container">
-          <div class="band-copy">
-            <p class="label">Becca Swan’s Book Realm</p>
-            <h2>Stay close to the shadows.</h2>
+          <div class="newsletter-gift">
+            <img class="newsletter-gift-cover" src="../assets/the-bach-cover.jpg" alt="Cover of The Bach by Becca Swan" width="943" height="1500" loading="lazy">
+            <div class="band-copy">
+              <p class="label">Becca Swan’s Book Realm</p>
+              <h2>Newsletter Sign Up</h2>
+              <p class="gift-offer"><strong>Get <em>The Bach</em> short story free when you sign up.</strong></p>
+            </div>
           </div>
           <form class="signup" action="https://assets.mailerlite.com/jsonp/1979694/forms/199376724610254230/subscribe" method="post" data-signup-form>
               <label class="field-label" for="signup-email">Email address</label>
               <div class="signup-row">
                 <input id="signup-email" name="fields[email]" type="email" autocomplete="email" placeholder="you@example.com" required>
-                <button class="btn btn-primary" type="submit">Join the list</button>
+                <button class="btn btn-primary" type="submit">Newsletter Sign Up</button>
               </div>
               <p class="form-status" data-signup-status role="status" aria-live="polite"></p>
             </form>
@@ -133,17 +143,20 @@
             <span class="brand-name">Becca Swan</span>
           </a>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="../books/">Books</a>
-            <a href="../about/">About</a>
-            <a href="../newsletter/">Newsletter</a>
+            <a href="/fantasy-shifter-romance/">Fantasy &amp; Shifter Romance</a>
+            <a href="/holiday-romance/">Holiday Romance</a>
+            <a href="/contemporary-romance/">Contemporary Romance</a>
+            <a href="/thrillers/">Thrillers</a>
+            <a href="/about/">About</a>
+            <a href="/newsletter/">Newsletter Sign Up</a>
             <a href="https://www.inkitt.com/BeccaSwan" rel="noopener">Inkitt</a>
-            <a href="../contact/">Contact</a>
+            <a href="/contact/">Contact</a>
             <a class="footer-email" href="mailto:beccaswanbooks@gmail.com">beccaswanbooks@gmail.com</a>
           </nav>
         </div>
         <p class="footer-bottom">&copy; <span data-year>2026</span> Becca Swan</p>
       </div>
     </footer>
-    <script src="../script.js?v=genre-navigation-20261126"></script>
+    <script src="../script.js?v=newsletter-genres-20261126"></script>
   </body>
 </html>

@@ -20,6 +20,7 @@
   --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
   --page: 1200px;
   --gutter: 20px;
+  --header-offset: 144px;
   --shadow-cover: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
@@ -77,6 +78,11 @@ h2 {
 .container {
   width: min(var(--page), calc(100% - 2 * var(--gutter)));
   margin-inline: auto;
+}
+
+section[id],
+main[id] {
+  scroll-margin-top: var(--header-offset);
 }
 
 .visually-hidden {
@@ -269,11 +275,16 @@ h2 {
 }
 
 .header-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  min-height: 88px;
+  position: relative;
+  display: block;
+  min-height: 0;
+  padding-block: 12px;
+}
+
+.header-wrap > .brand {
+  position: absolute;
+  top: 12px;
+  left: 0;
 }
 
 .brand {
@@ -301,8 +312,27 @@ h2 {
 
 .site-nav {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.nav-pages,
+.nav-genres {
+  display: flex;
   align-items: center;
+  min-height: 44px;
+}
+
+.nav-pages {
+  justify-content: flex-end;
   gap: 28px;
+  padding-left: 260px;
+}
+
+.nav-genres {
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .site-nav a {
@@ -653,7 +683,7 @@ h2 {
 
 .holiday-snippet {
   padding-block: 72px;
-  scroll-margin-top: 90px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .holiday-snippet .container {
@@ -843,6 +873,74 @@ h2 {
 .band--compact h2 {
   font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.5rem);
   line-height: 1.1;
+}
+
+.newsletter-gift {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  min-width: 0;
+}
+
+.newsletter-gift-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: var(--shadow-cover);
+}
+
+.newsletter-gift .gift-offer {
+  margin: 18px 0 0;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.newsletter-gift .gift-offer strong {
+  font-weight: 500;
+  color: var(--bone);
+}
+
+.newsletter-gift .gift-description {
+  margin: 16px 0 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.band--gift .container {
+  gap: 48px;
+}
+
+.band--gift .newsletter-gift {
+  flex: 1 1 auto;
+}
+
+.band--gift .signup {
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.band--gift .signup-row,
+.newsletter-panel .signup-row {
+  flex-direction: column;
+}
+
+.band--gift .signup-row .btn,
+.newsletter-panel .signup-row .btn {
+  white-space: normal;
+}
+
+.newsletter-page .newsletter-gift {
+  grid-template-columns: 180px minmax(0, 1fr);
+  margin-top: 28px;
+}
+
+.newsletter-page .gift-offer {
+  margin-top: 0;
+  font-size: 23px;
 }
 
 /* ---------- Forms ---------- */
@@ -1100,7 +1198,7 @@ textarea:focus {
 /* ---------- Books page ---------- */
 
 .book-genre {
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .genre-heading {
@@ -1109,7 +1207,11 @@ textarea:focus {
 
 .book-genre > .feature {
   padding-top: 0;
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--header-offset);
+}
+
+.genre-page .book-genre > .feature {
+  padding-top: 72px;
 }
 
 .series-title {
@@ -1123,7 +1225,7 @@ textarea:focus {
   align-items: start;
   padding-block: 40px;
   border-top: 1px solid rgba(243, 235, 230, 0.1);
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .series-row:last-child {
@@ -1198,7 +1300,7 @@ textarea:focus {
   border: 1px solid var(--line);
   border-radius: 2px;
   background: var(--surface);
-  scroll-margin-top: 110px;
+  scroll-margin-top: var(--header-offset);
 }
 
 .section--alt .book-card {
@@ -1318,8 +1420,31 @@ textarea:focus {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
+  :root {
+    --header-offset: 84px;
+  }
+
   .header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
     min-height: 64px;
+    padding-block: 0;
+  }
+
+  .header-wrap > .brand {
+    position: static;
+  }
+
+  .nav-pages,
+  .nav-genres {
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: stretch;
+    gap: 0;
+    min-height: 0;
+    padding: 0;
   }
 
   .brand img {
@@ -1339,12 +1464,14 @@ textarea:focus {
   .site-nav {
     position: absolute;
     top: 100%;
-    right: 0;
-    left: 0;
+    right: calc(-1 * var(--gutter));
+    left: calc(-1 * var(--gutter));
     display: none;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
     padding: 8px var(--gutter) 24px;
     border-bottom: 1px solid var(--line-red);
     background: #0c0a0a;
@@ -1357,6 +1484,7 @@ textarea:focus {
 
   .site-nav a {
     display: flex;
+    white-space: normal;
     align-items: center;
     min-height: 52px;
     padding: 0;
@@ -1400,6 +1528,11 @@ textarea:focus {
 }
 
 @media (max-width: 1000px) {
+  .band--gift .signup {
+    width: 100%;
+    max-width: 540px;
+  }
+
   .feature .container {
     grid-template-columns: 280px minmax(0, 1fr);
     gap: 48px;
@@ -1515,6 +1648,21 @@ textarea:focus {
 }
 
 @media (max-width: 600px) {
+  .newsletter-gift,
+  .newsletter-page .newsletter-gift {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .newsletter-gift .gift-offer,
+  .newsletter-gift .gift-description {
+    font-size: 19px;
+  }
+
+  .band--gift .container {
+    gap: 28px;
+  }
+
   .holiday-snippet {
     padding-block: 56px;
   }
