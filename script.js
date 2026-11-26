@@ -8,6 +8,14 @@ if (navToggle && nav) {
     navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    });
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && nav.classList.contains("open")) {
       nav.classList.remove("open");
