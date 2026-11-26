@@ -1084,6 +1084,12 @@ textarea:focus {
   margin-top: 12px;
 }
 
+.book-card--preorder {
+  grid-column: 1 / -1;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 40px;
+}
+
 .book-card--preorder img {
   aspect-ratio: auto;
   height: auto;
