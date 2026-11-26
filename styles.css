@@ -1084,6 +1084,25 @@ textarea:focus {
   margin-top: 12px;
 }
 
+.book-card--preorder img {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.book-card--preorder .book-status {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.book-card--preorder .actions {
+  margin-top: 24px;
+}
+
+.book-card--preorder .btn {
+  padding: 14px 18px;
+  letter-spacing: 0.08em;
+}
+
 .section-title-gap {
   margin-bottom: 48px;
 }
