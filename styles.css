@@ -466,10 +466,6 @@ h2 {
   max-width: 640px;
   justify-self: center;
   overflow: hidden;
-  border: 1px solid var(--line-red);
-  border-radius: 4px;
-  background: #e5e5e5;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
 }
 
 .preorder-art img {
