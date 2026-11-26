@@ -390,37 +390,54 @@ h2 {
   color: var(--red-em);
 }
 
+.hero-books {
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+  justify-self: end;
+}
+
 .cover-fan {
   position: relative;
+  isolation: isolate;
   width: 100%;
   max-width: 520px;
   aspect-ratio: 520 / 540;
   justify-self: end;
 }
 
-.cover-fan img {
+.cover-fan a {
   position: absolute;
-  aspect-ratio: 5 / 8;
-  object-fit: cover;
+  display: block;
   border-radius: 2px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
 }
 
+.cover-fan img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  border-radius: 2px;
+}
+
 .cover-fan .fan-left {
-  left: 0;
+  z-index: 1;
+  left: 4.5%;
   top: 17%;
   width: 42.3%;
   transform: rotate(-7deg);
 }
 
 .cover-fan .fan-right {
-  right: 0;
+  z-index: 1;
+  right: 4.5%;
   top: 17%;
   width: 42.3%;
   transform: rotate(7deg);
 }
 
 .cover-fan .fan-center {
+  z-index: 2;
   left: 22.1%;
   top: 4.4%;
   width: 55.8%;
@@ -430,7 +447,7 @@ h2 {
 /* ---------- Deliverance preorder ---------- */
 
 .home-hero--preorder .container {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
   gap: 64px;
   padding-block: 72px 80px;
 }
@@ -1184,6 +1201,7 @@ textarea:focus {
     padding-block: 72px 80px;
   }
 
+  .hero-books,
   .cover-fan {
     justify-self: center;
   }
